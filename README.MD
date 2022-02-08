@@ -3,6 +3,10 @@
 Resumo da aula de introdução ao Git e Github
 
 - Resumo
-- Fotos
-- Links de videos do Youtube 
+
+- Fotos caderno
+
+- Links de vídeos do Youtube 
+
+  ​
 

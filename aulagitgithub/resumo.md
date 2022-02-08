@@ -98,3 +98,95 @@ Até aqui aprendemos a criar um repositório, a iniciar a estrutura do git, para
 
 
 
+Ciclo de vida dos arquivos no Git
+Passo a passo no ciclo de vida
+Git Init
+Esse comando além de criar aquela pasta ".git/", ela inicializa um conceito do git chamado "repositório", quando usamos o "git init" estamos de fato criando um repositório dentro de um diretório, dentro de uma pasta.
+.... voltar no começo da aula
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$mkdir aulagitgithub
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ ls
+aulagitgithub/  resumo.md
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ mv resumo.md ./aulagitgithub
+mv - serve para mover um arquivo para uma pasta
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+
+        deleted:    resumo.md
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        aulagitgithub/
+no changes added to commit (use "git add" and/or "git commit -a")
+ .... voltar nessa parte pra entender melhor
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ git add resumo.md aulagitgithub/
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    resumo.md -> aulagitgithub/resumo.md
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ git commit -m "cria pasta aulagitgithub, move arquivos resumo para aulagitgithub"
+[master 220be0c] cria pasta aulagitgithub, move arquivos resumo para aulagitgithub
+ 1 file changed, 17 insertions(+), 1 deletion(-)
+ rename resumo.md => aulagitgithub/resumo.md (72%)
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ echo > README.MD
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ ls
+README.MD  aulagitgithub/
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.MD
+nothing added to commit but untracked files present (use "git add" to track)
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$
+Abrir o arquivo README.MD no typora e digital a introdução como se fosse a capa.
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.MD
+
+nothing added to commit but untracked files present (use "git add" to track)
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ git add *
+warning: LF will be replaced by CRLF in README.MD.
+The file will have its original line endings in your working directory
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   README.MD
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ git commit -m "adiciona index"
+[master afe9dfe] adiciona index
+ 1 file changed, 8 insertions(+)
+ create mode 100644 README.MD
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$
+voltar na aula 
+
+Resolvendo Conflitos
+Como os conflitos acontecem no Github e como resolvê-los
+Fazer alteração no meu README.MD
