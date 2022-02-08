@@ -74,11 +74,27 @@ Então agora já está feito a configuração inicial que o GIT iria pedir para 
 ##### 2 -Adicionando um arquivo - Criar um arquivo com a extensão markdown- usamos extensão .md
 
  VAmos usar um tipo de arquivo diferente chamado Markdown.
-Markdown é nada mais é do que uma forma mais humana de se escrever um arquivo HTML, então para colocar textos de tamanhos diferentes nós temos a tags HTML:"h1,...h6", e transpondo isso para o Markdown,´para escrever um título grande, um título de nível um, coloca antes do texto uma hashtag  "#"  significa que está  usando o h1,  se colocar duas hashtags "##" significa que está usando o h2, e assim sucessivamente.   
+Markdown é nada mais é do que uma forma mais humana de se escrever um arquivo HTML, então para colocar textos de tamanhos diferentes nós temos a tags HTML:"h1,...h6", e transpondo isso para o Markdown,´para escrever um título grande, um título de nível um, coloca antes do texto uma hashtag  "#"  significa que está  usando o h1,  se colocar duas hashtags "##" significa que está usando o h2, e assim sucessivamente. 
 
 O Markdown é uma forma humanizada de se escrever HTML sem que voçê tenha que entender como que o HTML funciona de fato.
 
 Ir na pasta resumo-aula-git e criar um arquivo "resumo" com o typora
+
+Agora realizar o "commit" desse arquivo
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ git add *
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$git commit -m "commit incial"
+-m é uma flag no commit, "..."e passar uma string(um texto)
+Dani@Dani-PC MINGW64 /c/workspace/resumo-aula-git (master)
+$ git commit -m "commit inicial"
+[master (root-commit) da9b68d] commit inicial
+ 1 file changed, 84 insertions(+)
+ create mode 100644 resumo.md
+O professor disse na aula anterior, os commits que eles são os objetos do git que dão significado as alterações? E que esses objetos em si, carregam uma mensagem de texto, juntamente com outros metadados como o autor.. a hora que o commit foi criado...então é essa mensagem que vamos escrever agora. "commit inicial".
+Depois que tiver acesso a essa lista de alterações, consegue facilmente indentificar qual arquivo que adicionamos, qual commit foi feito, e até mesmo ter acesso a essa mensagem curta para conseguir entender o que aquele commit significa dentro das nossas alterações, dentro no nosso projeto.
+E acima ele traz algumas informações como: A master e o início de um número que fizemos já lá atrás da9b68d esses números são os números iniciais do "sha1", lembrar de objetos, que cada objeto ele passa por esse algoritimo de encriptação que gera esses caracteres indentificadores de 40 dígitos, que é o "sha1", ai está esse caractere indentificando esse commit realizado.
+Até aqui aprendemos a criar um repositório, a iniciar a estrutura do git, para que ele comece a versionar de fato código, primeiro contato com o markdown, e está feito o commit inicial do nosso projeto.
 
 
 
